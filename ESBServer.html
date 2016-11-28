@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/icon-font.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<style>
+		.esb_server_box {
+			margin: 20px;
+		}
+	</style>
+</head>
+
+<body>
+<div class="esb_server_box">
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="factoryCode" class="col-sm-2 control-label">厂家编号</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="factoryCode" placeholder="厂家编号">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="password" class="col-sm-2 control-label">防伪查询密码</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="password" placeholder="防伪查询密码">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="digitCode" class="col-sm-2 control-label">防伪码</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="digitCode" placeholder="防伪码">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="mobile" class="col-sm-2 control-label">消费者查询手机/IP/电话</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="mobile" placeholder="消费者查询手机/IP/电话">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="queryType" class="col-sm-2 control-label">查询用户类型（1、消息者2、客服）</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="queryType" placeholder="查询用户类型">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="channleType" class="col-sm-2 control-label">查询方式类型</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="channleType" placeholder="查询方式类型">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="access_token" class="col-sm-2 control-label">校验码</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="access_token" placeholder="校验码">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="button" class="btn btn-default" onclick="submit_esb_server()">提交</button>
+			</div>
+		</div>
+	</form>
+
+
+
+	<table class="table table-striped">
+		<caption>查询结果</caption>
+		<thead>
+			<tr>
+				<th>结果码</th>
+				<th>窜货码</th>
+				<th>产品编码</th>
+				<th>条码的生产日期</th>
+				<th>品牌</th>
+				<th>发货单号</th>
+				<th>总仓发往地</th>
+				<th>中箱码</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="esb_result">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+
+<script type="text/javascript">
+	var token = ''
+
+	$.get(
+			"http://esb-test.by-health.com/ESBServer/sysApi/appAuthenticate?appId=nfsUser&appSecret=123nfsUsersecretcode456",
+			function(data){
+				token = data.access_token
+				alert("Data Loaded: " + data);
+			});
+
+
+
+	/**
+	 * 提交表单
+	 */
+
+	function submit_esb_server () {
+
+		if(token) return // 没有获取得到access_token
+
+		var params_post = get_esb_server()
+		$.post("http://esb.by-health.com/ESBServer/fakeCheckApi/getProductInfoByCode", params_post,
+				function(data) {
+					alert("Data Loaded: " + data);
+					var td_html = '';
+					td_html +=   '<td>'+ data.systemState +'</td>'
+											+'<td>'+ data.cuanhuoCode +'</td>'
+											+'<td>'+ data.productCode +'</td>'
+											+'<td>'+ data.productDate +'</td>'
+											+'<td>'+ data.brand +'</td>'
+											+'<td>'+ data.sendOrder +'</td>'
+											+'<td>'+ data.dealer +'</td>'
+											+'<td>'+ data.mpagecode +'</td>';
+
+					$('#esb_result').html(td_html);
+				});
+
+	}
+
+	/**
+	 * 获取填写的参数
+	 */
+	function get_esb_server () {
+
+		var params = []
+		params.factoryCode  = $('#factoryCode').val()
+		params.password     = $('#password').val()
+		params.digitCode    = $('#digitCode').val()
+		params.mobile       = $('#mobile').val()
+		params.queryType    = $('#queryType').val()
+		params.channleType  = $('#channleType').val()
+		params.access_token = $('#access_token').val() || token
+
+		return params
+	}
+
+
+
+
+</script>
+
+</body>
+
+</html>
