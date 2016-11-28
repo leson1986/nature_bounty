@@ -1,15 +1,32 @@
-@font-face {
+/*@font-face {
     font-family: 'iconfont';
-    src: url('//at.alicdn.com/t/font_1472695881_8626988.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/font_1472695881_8626988.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/font_1472695881_8626988.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/font_1472695881_8626988.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/font_1472695881_8626988.svg#iconfont') format('svg'); /* iOS 4.1- */
+    src: url('//at.alicdn.com/t/font_1472695881_8626988.eot'); !* IE9*!
+    src: url('//at.alicdn.com/t/font_1472695881_8626988.eot?#iefix') format('embedded-opentype'), !* IE6-IE8 *!
+    url('//at.alicdn.com/t/font_1472695881_8626988.woff') format('woff'), !* chrome、firefox *!
+    url('//at.alicdn.com/t/font_1472695881_8626988.ttf') format('truetype'), !* chrome、firefox、opera、Safari, Android, iOS 4.2+*!
+    url('//at.alicdn.com/t/font_1472695881_8626988.svg#iconfont') format('svg'); !* iOS 4.1- *!
 }
-
-
-
 
 .iconfont{
     font-family:"iconfont";
-    font-size:16px;font-style:normal;}
+    font-size:16px;font-style:normal;}*/
+
+
+@font-face {font-family: "icon_nb";
+	src: url('//at.alicdn.com/t/font_8ljqfaqpqgzumcxr.eot?t=1480318098236'); /* IE9*/
+	src: url('//at.alicdn.com/t/font_8ljqfaqpqgzumcxr.eot?t=1480318098236#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('//at.alicdn.com/t/font_8ljqfaqpqgzumcxr.woff?t=1480318098236') format('woff'), /* chrome, firefox */
+	url('//at.alicdn.com/t/font_8ljqfaqpqgzumcxr.ttf?t=1480318098236') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('//at.alicdn.com/t/font_8ljqfaqpqgzumcxr.svg?t=1480318098236#icon_nb') format('svg'); /* iOS 4.1- */
+}
+
+.icon_nb {
+	font-family:"icon_nb" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.nb-pos:before { content: "\e648"; }
