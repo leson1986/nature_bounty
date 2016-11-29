@@ -96,174 +96,168 @@ a:active{ text-decoration: none}
 
 
 @media (min-width: 1200px) {
-	.container {
-		width:1200px
-	}
+    .container {
+        width:1200px
+    }
 }
 .container {
-	padding: 0;
+    padding: 0;
 }
 
 /* 面包屑 */
 .natureBreadcrumb {
-	line-height: 45px;
-	list-style: none;
-	border-radius: 4px
+    line-height: 45px;
+    list-style: none;
+    border-radius: 4px
 }
 
 .natureBreadcrumb>li {
-	display: inline-block
+    display: inline-block
 }
 
 .natureBreadcrumb>li+li:before {
-	padding: 0 5px;
-	color: #6e6e6e;
-	content: "\003E"
+    padding: 0 5px;
+    color: #6e6e6e;
+    content: "\003E"
 }
 
 .natureBreadcrumb>.active {
-	color: #777
+    color: #777
 }
 
 
 /* 积分转移 */
 .integraTransferBox {
-	margin-top: 45px;
+    margin-top: 45px;
 }
-	.integraTransferBox .integraContainer {
-		margin-top: 160px;
-		position: relative;
-		background: #f8faf9;
-		min-height: 560px;
-	}
-	.integraTransferBox .integraFlower {
-		position: absolute;
-		top: -162px;
-		left: -50px;
-		width: 341px;
-		height: 376px;
-		background: url('../img/integralTransfer/flower.png');
-		z-index: 2;
-	}
-	.integraTransferBox .integraTitle {
-		position: absolute;
-		top: -115px;
-		right: -95px;
-		width: 649px;
-		height: 99px;
-		background: url('../img/integralTransfer/title.png');
-		z-index: 2;
-	}
-	.integraTransferBox .integraText {
-		position: absolute;
-		top: 120px;
-		left: 155px;
-		width: 840px;
-		z-index: 3;
-	}
+.integraTransferBox .integraContainer {
+    margin-top: 160px;
+    position: relative;
+    background: #f8faf9;
+    min-height: 560px;
+}
+.integraTransferBox .integraFlower {
+    position: absolute;
+    top: -162px;
+    left: -50px;
+    width: 341px;
+    height: 376px;
+    background: url('../img/integralTransfer/flower.png');
+    z-index: 2;
+}
+.integraTransferBox .integraTitle {
+    position: absolute;
+    top: -115px;
+    right: -95px;
+    width: 649px;
+    height: 99px;
+    background: url('../img/integralTransfer/title.png');
+    z-index: 2;
+}
+.integraTransferBox .integraText {
+    position: absolute;
+    top: 120px;
+    left: 155px;
+    width: 840px;
+    z-index: 3;
+}
 
 @media (min-width: 768px) {
-	.integraTransferBox .integraText {
-		left: 130px;
-		width: 500px;
-	}
+    .integraTransferBox .integraText {
+        left: 130px;
+        width: 500px;
+    }
 }
 
 @media (min-width: 992px) {
-	.integraTransferBox .integraText {
-		left: 155px;
-		width: 685px;
-	}
+    .integraTransferBox .integraText {
+        left: 155px;
+        width: 685px;
+    }
 }
 
 @media (min-width: 1200px) {
-	.integraTransferBox .integraText {
-		left: 155px;
-		width: 840px;
-	}
+    .integraTransferBox .integraText {
+        left: 155px;
+        width: 840px;
+    }
 }
 
 .integraTransferBox .integraText .integraTextTag,
-		.integraTransferBox .integraText .integraTextTitle {
-			display: block;
-		}
-		.integraTransferBox .integraText .integraTextTitle {
-			font-size: 30px;
-			color: #00834d;
-			margin-bottom: 20px;
-		}
-		.integraTransferBox .integraText .integraTextTag {
-			font-size: 24px;
-			color: #7b7b7b;
-			margin-bottom: 10px;
-		}
-		.integraTransferBox .integraText .integraTextPadTop {
-			padding-top: 20px;
-		}
-		.integraTransferBox .integraText .integraTextCon {
-			font-size: 14px;
-			color: #7b7b7b;
-			line-height: 28px;
-			text-indent: 2em;
-		}
+.integraTransferBox .integraText .integraTextTitle {
+    display: block;
+}
+.integraTransferBox .integraText .integraTextTitle {
+    font-size: 30px;
+    color: #00834d;
+    margin-bottom: 20px;
+}
+.integraTransferBox .integraText .integraTextTag {
+    font-size: 24px;
+    color: #7b7b7b;
+    margin-bottom: 10px;
+}
+.integraTransferBox .integraText .integraTextPadTop {
+    padding-top: 20px;
+}
+.integraTransferBox .integraText .integraTextCon {
+    font-size: 14px;
+    color: #7b7b7b;
+    line-height: 28px;
+    text-indent: 2em;
+}
 
 .integraButtonBox {
-	margin: 20px 0;
+    margin: 20px 0;
 }
-	.integraButtonBox .integraButton {
-		width: 586px;
-		height: 175px;
-		margin: 10px 0;
-		text-align: center;
-	}
-	.integraButtonBox .integraButtonLeft {
-		background: url("../img/integralTransfer/btn-login.jpg");
-		float: left;
-	}
-	.integraButtonBox .integraButtonRight {
-		background: url("../img/integralTransfer/btn-rule.jpg");
-		float: right;
-	}
+.integraButtonBox .integraButton {
+    width: 586px;
+    height: 175px;
+    margin: 10px 0;
+    text-align: center;
+    display: block;
+}
+.integraButtonBox .integraButtonLeft {
+    background: url("../img/integralTransfer/btn-login.jpg");
+    float: left;
+}
+.integraButtonBox .integraButtonLeft:hover {
+    background: url("../img/integralTransfer/btn-login-active.jpg");
+}
+.integraButtonBox .integraButtonRight {
+    background: url("../img/integralTransfer/btn-rule.jpg");
+    float: right;
+}
+.integraButtonBox .integraButtonRight:hover {
+    background: url("../img/integralTransfer/btn-rule-active.jpg");
+}
 
 @media (min-width: 768px) {
-	.integraButtonBox .integraButtonLeft {
-		float: none;
-	}
-	.integraButtonBox .integraButtonRight {
-		float: none;
-	}
+    .integraButtonBox .integraButtonLeft {
+        float: none;
+    }
+    .integraButtonBox .integraButtonRight {
+        float: none;
+    }
 }
 
 @media (min-width: 992px) {
-	.integraButtonBox .integraButtonLeft {
-		float: none;
-	}
-	.integraButtonBox .integraButtonRight {
-		float: none;
-	}
+    .integraButtonBox .integraButtonLeft {
+        float: none;
+    }
+    .integraButtonBox .integraButtonRight {
+        float: none;
+    }
 }
 
 @media (min-width: 1200px) {
-	.integraButtonBox .integraButtonLeft {
-		float: left;
-	}
-	.integraButtonBox .integraButtonRight {
-		float: right;
-	}
+    .integraButtonBox .integraButtonLeft {
+        float: left;
+    }
+    .integraButtonBox .integraButtonRight {
+        float: right;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
