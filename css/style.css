@@ -52,7 +52,7 @@ a:active{ text-decoration: none}
 
 /*轮播图*/
 .lubo{ width: 100%; clear: both; position: relative; height: 960px}
-.smallLubo{width: 100%; clear: both; position: relative; height: 572px}
+.smallLubo{width: 100%; clear: both; position: relative; height: 600px}
 .lubo_box{ position: relative; width: 100%; height:100%; }
 .lubo_box li{ float: left;position: absolute; top: 0; left: 0; width: 100%; opacity: 0;filter:alpha(opacity=0); list-style: none;height:100%;}
 .lubo_box li a{ display: block;width: 100%;  height:100%;}
@@ -105,6 +105,11 @@ a:active{ text-decoration: none}
 }
 
 /* 面包屑 */
+.natureBreadcrumbBox {
+    height: 45px;
+    width: 100%;
+    background-color: #f8fcf6
+}
 .natureBreadcrumb {
     line-height: 45px;
     list-style: none;
@@ -149,7 +154,7 @@ a:active{ text-decoration: none}
     position: absolute;
     top: -115px;
     right: -95px;
-    width: 649px;
+    width: 430px;
     height: 99px;
     background: url('../img/integralTransfer/title.png');
     z-index: 2;
@@ -259,8 +264,116 @@ a:active{ text-decoration: none}
     }
 }
 
-
-
-
+/* 联系我们 */
+.contactUsBox {
+    margin-top: 35px;
+}
+.contactUsBox .contactUsBanner {
+    background: url("../img/contactus/contactus-banner.jpg") no-repeat;
+    width: 1200px;
+    height: 450px;
+}
+.contactUsContainer {
+    margin: 0;
+    margin-top: 66px;
+    padding: 0;
+}
+.contactUsContainer li {
+    float: left;
+    list-style: none;
+    margin-bottom: 115px;
+}
+.contactUsContainer li.cucFrist {
+    width: 445px;
+}
+.contactUsContainer li.cucSecond {
+    width: 365px;
+}
+.contactUsContainer li.cucThree {
+    width: 390px;
+}
+.cucLi:after {
+    content: '';
+    clear: both;
+}
+.cucLi span {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    background-image: url("../img/contactus/contact-icon.png");
+    background-repeat: no-repeat;
+}
+.cucLi .cAdd {
+    background-position: 0 0;
+}
+.cucLi .cTel {
+    background-position: 0 -80px;
+}
+.cucLi .cWeb {
+    background-position: 0 -160px;
+}
+.cucLi .cWeibo {
+    background-position: 0 -240px;
+}
+.cucLi .cWx {
+    background-position: 0 -320px;
+}
+.cucLi .cTmall {
+    background-position: 0 -399px;
+}
+.cucLi .cucCon {
+    float: left;
+    margin-top: 13px;
+    margin-left: 12px;
+}
+.cucLi .cucCon h6 {
+    margin: 0;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #6a6a6a;
+}
+.cucLi .cucCon .cucConTit h3,
+.cucLi .cucCon .cucConTit i {
+    float: left;
+}
+.cucLi .cucCon .cucConTit h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #6ac741;
+}
+.cucLi .cucCon .cucConTit i {
+    width: 130px;
+    height: 12px;
+    margin-left: 8px;
+    margin-top: 13px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    background-image: url("../img/contactus/contact-txt.png");
+    background-repeat: no-repeat;
+}
+/*.cucLi .cucCon .cucConTit i {
+    list-style: none;
+}*/
+.cucLi .cucCon .cucConTit .cAddTxt {
+    background-position: 0 0;
+}
+.cucLi .cucCon .cucConTit .cTelTxt {
+    background-position: 0 -44px;
+}
+.cucLi .cucCon .cucConTit .cWebTxt {
+    background-position: 0 -86px;
+}
+.cucLi .cucCon .cucConTit .cWeiboTxt {
+    background-position: 0 -128px;
+}
+.cucLi .cucCon .cucConTit .cWxTxt {
+    background-position: 0 -170px;
+}
+.cucLi .cucCon .cucConTit .cTmallTxt {
+    background-position: 0 -212px;
+}
 
 
