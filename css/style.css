@@ -377,3 +377,383 @@ a:active{ text-decoration: none}
 }
 
 
+/* 自然部落--首页 */
+.tribeTitle {
+	width: 1200px;
+	height: 167px;
+	background: url("../img/tribe/tribe-title.jpg") no-repeat;
+}
+
+.tribeBox .tribeTalking,
+.tribeBox .tribeFeeling,
+.tribeBox .tribeEvent{
+	width: 1200px;
+	position: relative;
+}
+.tribeBox .tribeTalking {
+	height: 441px;
+	margin-top: 95px;
+	background: url("../img/tribe/tribe-talking.jpg") no-repeat;
+}
+.tribeBox .tribeFeeling {
+	height: 452px;
+	margin-top: 90px;
+	background: url("../img/tribe/tribe-feeling.jpg") no-repeat;
+}
+.tribeBox .tribeEvent {
+	height: 438px;
+	margin-top: 125px;
+	margin-bottom: 55px;
+	background: url("../img/tribe/tribe-event.jpg") no-repeat;
+}
+
+
+#tribeTalking.content,
+#tribeFeeling.content,
+#tribeEvent.content{
+	overflow: auto;
+	position: absolute;
+	right: 22px;
+	bottom: 28px;
+	width: 680px;
+	max-width: 97%;
+	height: 273px;
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+
+#tribeFeeling.content{
+	left: 30px;
+}
+#tribeTalking ul,
+#tribeFeeling ul,
+#tribeEvent ul {
+	padding: 0;
+}
+#tribeTalking li,
+#tribeFeeling li,
+#tribeEvent li{
+	list-style: none;
+	border-bottom: 1px dotted #d0d0d0;
+	margin-bottom: 35px;
+}
+#tribeTalking li .tribeLiTxt,
+#tribeFeeling li .tribeLiTxt,
+#tribeEvent li .tribeLiTxt{
+	width: 455px;
+	float: left;
+}
+#tribeTalking li .tribeLiTxt h3,
+#tribeFeeling li .tribeLiTxt h3,
+#tribeEvent li .tribeLiTxt h3{
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #00834d;
+}
+#tribeTalking li .tribeLiTxt p,
+#tribeFeeling li .tribeLiTxt p,
+#tribeEvent li .tribeLiTxt p{
+	width: 365px;
+	font-size: 12px;
+	padding-bottom: 9px;
+	color: #666464;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap
+}
+#tribeTalking li .tribeLiBtn,
+#tribeFeeling li .tribeLiBtn,
+#tribeEvent li .tribeLiBtn{
+	width: 102px;
+	margin-top: 15px;
+	margin-right: 12px;
+	float: right;
+}
+#tribeTalking li .tribeLiBtn a,
+#tribeFeeling li .tribeLiBtn a,
+#tribeEvent li .tribeLiBtn a{
+	display: block;
+	font-size: 12px;
+	height: 28px;
+	line-height: 26px;
+	text-align: center;
+	color: #00834d;
+	border: 1px solid #61b63b;
+	border-radius: 10px;
+
+}
+#tribeTalking li:before,
+#tribeFeeling li:before,
+#tribeEvent li:before{
+	padding: 0 5px;
+	color: #00834d;
+	content: "●";
+	float: left;
+}
+
+/* 自然部落--正文 */
+.tribeArticleTitle {
+	width: 1200px;
+	height: 120px;
+	background: url("../img/tribe/tribe-article-title.jpg") no-repeat;
+}
+
+.tribeArticleTalking,
+.tribeArticleFeeling,
+.tribeArticleEvent {
+    display: none;
+    width: 1200px;
+    min-height: 300px;
+    overflow: hidden;
+    margin-top: 20px;
+    background: #f8faf9;
+}
+
+.tribeArticleNav {
+	padding: 0;
+	margin: 0;
+	margin-top: 60px;
+}
+.tribeArticleNav li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 394px;
+	height: 153px;
+	overflow: hidden;
+	float: left;
+	cursor: pointer;
+}
+.tribeArticleNav li:first-child {
+	background: url("../img/tribe/tribe-article-talking.jpg") no-repeat;
+}
+.tribeArticleNav li.taActive:first-child {
+	background: url("../img/tribe/tribe-article-talking-active.jpg") no-repeat;
+}
+.tribeArticleNav li:nth-child(2) {
+	margin: 0 8px;
+	background: url("../img/tribe/tribe-article-feeling.jpg") no-repeat;
+}
+.tribeArticleNav li.taActive:nth-child(2) {
+	background: url("../img/tribe/tribe-article-feeling-active.jpg") no-repeat;
+}
+.tribeArticleNav li:last-child {
+	background: url("../img/tribe/tribe-article-event.jpg") no-repeat;
+}
+.tribeArticleNav li.taActive:last-child {
+	background: url("../img/tribe/tribe-article-event-active.jpg") no-repeat;
+}
+
+.tribeArticleHeader {
+    height: 155px;
+    position: relative;
+}
+.tribeArticleHeader .tribeArticleHeaderFlower {
+    width: 124px;
+    height: 127px;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    z-index: 10;
+    background: url("../img/tribe/tribe-article-flower-top.jpg") no-repeat;
+}
+.tribeArticleHeader .tribeArticleHeaderTitle {
+    width: 910px;
+    margin-left: 160px;
+    padding-top: 45px;
+    overflow: hidden;
+    position: relative;
+    z-index: 12;
+}
+.tribeArticleHeader .tribeArticleHeaderTitle h3 {
+    margin: 0;
+    padding: 0 20px;
+    padding-bottom: 35px;
+    font-size: 30px;
+    color: #215737;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+.tribeArticleHeader .tribeArticleHeaderTitle .tribeArticleHeaderLine {
+    width: 910px;
+    height: 1px;
+    background: url("../img/tribe/tribe-article-line.jpg") no-repeat;
+}
+
+.tribeArticleContainer {
+    width: 910px;
+    line-height: 25px;
+    margin-left: 160px;
+    overflow: hidden;
+}
+
+.tribeArticleFooter {
+    height: 200px;
+    position: relative;
+}
+.tribeArticleFooter .tribeArticleFooterFlower {
+    width: 164px;
+    height: 169px;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    z-index: 10;
+    background: url("../img/tribe/tribe-article-flower-bot.jpg") no-repeat;
+}
+.tribeArticleFooter .tribeArticleShareBox {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #99c0ac;
+}
+.tribeArticleFooter .tribeArticleShareBox .tribeArticleShare {
+    float: right;
+}
+.tribeArticleFooter .tribeArticleFooterNews {
+    width: 910px;
+    margin-left: 160px;
+    overflow: hidden;
+    position: relative;
+    z-index: 12;
+}
+.tribeArticleFooter .tribeArticleFooterNews .tribeArticleFooterItems {
+    margin: 0;
+    margin-top: 35px;
+    padding: 0;
+}
+.tribeArticleFooter .tribeArticleFooterNews .tribeArticleFooterItems li {
+    list-style: none;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+.tribeArticleFooter .tribeArticleFooterNews .tribeArticleFooterItems li a {
+    color: #333;
+}
+
+/* 产品中心 */
+.productsNavBox {
+	height: 145px;
+}
+
+.productsBanner {
+	width: 100%;
+	height: 444px;
+	background: url("../img/products/products-banner.jpg") no-repeat center top;
+}
+
+.productsBox {
+	margin-top: 90px;
+}
+.productsBox .productsTitleBg {
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	padding-left: 480px;
+	color: #00834d;
+	font-size: 16px;
+	background: url("../img/products/products-title-bg.jpg") no-repeat;
+}
+
+.productsItems {
+	margin-top: 95px;
+}
+.productsItems ul {
+	margin: 0 30px;
+	padding: 0;
+}
+.productsItems li {
+	padding: 0 50px;
+	list-style: none;
+	width: 380px;
+	height: 450px;
+	float: left;
+
+}
+
+.productsItemsCon {
+	margin: 5px;
+}
+.productsItemsCon h3,
+.productsItemsCon h6,
+.productsItemsCon p {
+	width: 260px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.productsItemsCon h3,
+.productsItemsCon h6 {
+	line-height: 25px;
+	color: #20937d;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap
+}
+.productsItemsCon h3 {
+	font-size: 18px;
+}
+.productsItemsCon h6 {
+	margin-bottom: 6px;
+	font-size: 14px;
+	border-bottom: 1px solid #e3e3e3;
+}
+.productsItemsCon p {
+	height: 40px;
+	line-height: 20px;
+	overflow: hidden;
+	font-size: 14px;
+	color: #4a1d00;
+}
+
+.productsItemsBtn {
+	width: 260px;
+	margin-top: 5px;
+	text-align: center;
+}
+.productsItemsBtn a {
+	display: inline-block;
+	font-size: 12px;
+	width: 116px;
+	height: 26px;
+	line-height: 24px;
+	text-align: center;
+	color: #fff;
+	background: #20937d;
+	border: 1px solid #20937d;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
